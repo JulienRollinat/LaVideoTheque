@@ -1,0 +1,16 @@
+﻿
+@model List<LaVideotheque.Client>
+
+<br />
+<h2>Liste des clients de la vidéothèque </h2>
+<br />
+
+
+
+@foreach (var item in @Model)
+{
+    <p> Nom :  @item.FirstName</p>
+    <p> Prénom : @item.LastName</p>
+    <p>@Html.ActionLink("Plus de détails", "DetailsForCustomers", "Home", new { Id = @item.Id }, null)</p>
+    <br>
+}

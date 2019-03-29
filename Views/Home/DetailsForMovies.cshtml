@@ -1,0 +1,17 @@
+﻿
+@model LaVideotheque.Film
+
+@{
+    ViewBag.Title = "DetailsForMovies";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+
+<h2>DetailsForMovies</h2>
+
+<p> Titre : @Model.Titre</p>
+
+<p> Genre : @Model.Genre</p>
+
+<p>@Html.ActionLink("Supprimer", "DeleteMovie", "Home", new { Id = @Model.Id }, null)</p>

@@ -1,0 +1,18 @@
+﻿
+@model List<LaVideotheque.Film>
+
+<br />
+<h2>Liste des films disponibles</h2>
+<br />
+
+
+
+@foreach (var item in @Model)
+{
+    <p> Titre : @item.Titre</p>
+    <p> Genre : @item.Genre</p>
+    <p>@Html.ActionLink("Plus de détails", "DetailsForMovies", "Home", new { Id = @item.Id }, null)</p>
+    <br>
+}
+
+    <button class="btn btn-success">@Html.ActionLink("Ajouter un film", "CreateMovie", "Home", new { style = "text-decoration:none;" })</button>

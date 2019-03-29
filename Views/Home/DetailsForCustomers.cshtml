@@ -1,0 +1,17 @@
+﻿
+@model LaVideotheque.Client
+
+@{
+    ViewBag.Title = "DetailsForCustomers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+
+<h2>DetailsForCustomers</h2>
+
+<p> Prénom : @Model.FirstName</p>
+
+<p> Nom :  @Model.LastName </p>
+
+<p>@Html.ActionLink("Supprimer", "DeleteCustomer", "Home", new { Id = @Model.Id }, null)</p>
